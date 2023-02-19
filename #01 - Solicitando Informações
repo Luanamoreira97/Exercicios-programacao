@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+
+void main() {
+    
+    char nome [61];
+    char profissao [61];
+    int idade;
+    char resposta [61];
+    printf ("Qual o seu nome?\n");
+    scanf("%s", nome);
+    printf("Olá %s! ", nome);
+    printf("Qual sua idade?");
+    scanf("%d", &idade);
+    printf("Otimo! ");
+    printf("Gostaria de saber também a sua profissão. Poderia informar?");
+    scanf("%s", profissao);
+    printf("Ok! Vou resumir as informações repassadas.");
+    printf("Seu nome é %s\n", nome);
+    printf("Sua Profissão é %s\n", profissao);
+    printf("Sua idade é %d\n", idade);
+    printf("Correto?");
+    scanf("%s",resposta);
+    if(!strcmp(resposta, "sim")) { 
+        
+    printf("Obrigada pela confirmação.");
+    } else {
+        printf("Ops! Execute novamente.");
+}
+
+}
