@@ -1,0 +1,72 @@
+#include <stdio.h>
+
+void calcularAreaTriangulo() { // Minha função para a opção 01
+    int base, altura, area;
+    printf("(OPÇÃO 1) Calcular Area do Triangulo.\n\n");
+    printf("Informe a base: ");
+    scanf("%d", &base);
+    printf("Informe a altura ");
+    scanf("%d", &altura);
+    area = base * altura;
+    printf("Area = %d\n\n", area);
+}
+
+void calcularAreaRetangulo(int base, int altura) { //Paramêtro por valor para opção 02
+    int area = base *altura;
+    printf("(OPÇÃO 2) Calcular Area do Retangulo\n\n");
+    printf("Base = %d e ", base);
+    printf("Altura = %d\n", altura);
+    printf("Area = %d\n\n", area);
+}
+
+void identificarRetangulo() {
+    int base, altura;
+    printf("(OPÇÃO 3) Identificar o tipo de Retangulo");
+    printf("\nInforme a base: ");
+    scanf("%d", &base);
+    printf("\nInforme a altura: ");
+    scanf("%d", &altura);
+
+    if(base == altura) { // Estrutura de Condição
+        //se for igual é um Quadrado
+        printf("\n Lados iguais: QUADRADO");
+    } else {
+        // se não for é um Retangulo
+        printf("\n Lados diferentes: RETANGULO COMUM");
+    }
+
+
+}
+
+void main () {
+    int opcao = -1; // variavel
+
+    while(opcao != 0) { // Estrutura de repetição
+        printf("\n\n=== MENU PRINCIPAL ===\n\n");
+        printf("1. Calcular Area do Triangulo.\n");
+        printf("2. Calcular Area do Retangulo.\n");
+        printf("3. Identificar o tipo de Retangulo.\n");
+        printf("4. Imprimir Numeros de Vetor.\n");
+        printf("0. SAIR.\n\n");
+        printf("Informe a opção desejada: ");
+        scanf("%d", &opcao); // Leitura da resposta
+
+        // Estrutura Condicional
+        if(opcao == 1) {
+            // executar calculo da area do triangulo
+            calcularAreaTriangulo();
+        } else if(opcao == 2) {
+            // executar calculo da area do retangulo
+            calcularAreaRetangulo(10,20);
+        } else if(opcao == 3) {
+            // executar identificação do tipo de retangulo
+            identificarRetangulo();
+        } else if(opcao == 4) {
+            // executar impressão dos numeros do vetor
+        } else if(opcao == 0) {
+            printf("Programa Finalizado. Até mais!");
+        }
+
+    }
+
+}
