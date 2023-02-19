@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+void main() {
+    
+    
+    char nome [60];
+    double nota1;
+    double nota2;
+    double resultado;
+    
+    printf(" == Média dos alunos ==\n\n");
+    printf(" Qual o nome do aluno: ");
+    scanf("%s", &nome);
+    printf("Informe a primeira nota da %s: ", nome);
+    scanf("%lf", &nota1);
+    printf("Informe a segunda nota da %s: ", nome);
+    scanf("%lf", &nota2);
+    
+    resultado = (nota1 + nota2) / 2;
+    
+    
+    if(resultado >= 7) {
+        printf("Aluno Aprovado!");
+    } else {
+        printf("Aluno Reprovado!");
+    }
+    
+}
