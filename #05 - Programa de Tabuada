@@ -1,0 +1,94 @@
+#include<stdio.h>
+
+void soma() {
+    
+    int num;
+    int soma;
+    
+    printf("(Opção 01) Soma\n");
+    printf("\nDigite um número:");
+    scanf("%d", &num);
+    
+    for(int i=0; i<10; i++) {
+    soma = i + num;
+    printf("%d + %d = %d\n", num, i, soma); }
+}
+
+void sub() {
+    
+    int num;
+    int sub;
+    
+    printf("(Opção 02) Subtração\n");
+    printf("\nDigite um número:");
+    scanf("%d", &num);
+    
+    for(int i=0; i<10; i++) {
+    sub = i - num;
+    printf("%d - %d = %d\n", num, i, sub); }
+    
+}
+
+void divi() {
+    
+    double num;
+    double divi;
+    
+    printf("(Opção 03) Divisão\n");
+    printf("\nDigite um número:");
+    scanf("%lf", &num);
+    
+    for(int i=0; i<10; i++) {
+    divi = num / i;
+    printf("%lf / %d = %.2lf\n", num, i, divi); }
+    
+}
+
+void mult() {
+    
+    int num;
+    int mult;
+    
+    printf("(Opção 04) Multiplicação\n");
+    printf("\nDigite um número:");
+    scanf("%d", &num);
+    
+    for(int i=0; i<10; i++) {
+    mult = i * num;
+    printf("%d * %d = %d\n", num, i, mult); }
+    
+}
+
+void main() {
+    
+    int opcao = 1;
+
+    while (opcao !=0)  {  
+        printf("==TABUADAS==\n");
+        printf("1. Tabuada de Soma\n");
+        printf("2. Tabuada de Subtração\n");
+        printf("3. Tabuada de Divisão\n");
+        printf("4. Tabuada de Multiplicação\n");
+        printf("5. Sair\n");
+        printf("Escolha uma opção:");
+        scanf("%d", &opcao);
+
+
+        if(opcao == 1) {
+        
+        soma();
+        } else if(opcao == 2) {
+                
+        sub();
+        } else if(opcao == 3) {
+                
+        divi();
+        } else if(opcao == 4) {
+        
+        mult();
+        } else if(opcao == 5) {
+            printf("\nPrograma Finalizado. Até mais!\n\n");
+        } 
+}
+
+}
